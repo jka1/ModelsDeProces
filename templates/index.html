@@ -46,18 +46,6 @@
 			#content #sidebar .widget ul li a { color:blue; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
 			#content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
 
-			/* Footerblurb */
-			#footerblurb { background:#eee;color:blue;}
-			#footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#d3d3f9;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
-			#footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
-
-			/* Footer */
-			#footer { background:#eee;}
-			#footer-inner { margin:auto; text-align:center; padding:12px; width:970px;}
-			#footer a {color:blue;text-decoration:none;}
-
-			/* Clear both sides to assist with div alignment  */
-			.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
 		</style>
 		<script type="text/javascript">
 			/* =============================
@@ -80,13 +68,12 @@
 					</div>
 					<div id="top-nav">
 						<ul>
-						<li><a href="{% url 'M2P:esports' %}">About</a></li>
+						<li><a href="#">About</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">Help</a></li>
 						</ul>
 					</div>
-					<div class="clr"></div>
 				</div>
 			</header>
 
@@ -95,7 +82,7 @@
 
 					<main id="contentbar">
 						<div class="article">
-							<p><script>generateText(12)</script></p>
+							<h2>Events a prop teu</h2>
 						</div>
 					</main>
 
@@ -103,44 +90,14 @@
 						<div class="widget">
 							<h3>Menu</h3>
 							<ul>
-							<li><a href="#">Esports</a></li>
-							<li><a href="#">Events</a></li>
-							<li><a href="#">Link 3</a></li>
-							<li><a href="#">Link 4</a></li>
-							<li><a href="#">Link 5</a></li>
+							<li><a href="{% url 'M2P:esports' %}">Esports</a></li>
+							<li><a href="{% url 'M2P:event' %}">Events</a></li>
+							<li><a href="#">Amics</a></li>
 							</ul>
 						</div>
 					</nav>
-
-					<div class="clr"></div>
 				</div>
 			</div>
-
-			<div id="footerblurb">
-				<div id="footerblurb-inner">
-
-					<div class="column">
-						<h2><span>Heading</span></h2>
-						<p><script>generateText(2)</script></p>
-					</div>
-					<div class="column">
-						<h2><span>Heading</span></h2>
-						<p><script>generateText(2)</script></p>
-					</div>
-					<div class="column">
-						<h2><span>Heading</span></h2>
-						<p><script>generateText(2)</script></p>
-					</div>
-
-					<div class="clr"></div>
-				</div>
-			</div>
-			<footer id="footer">
-				<div id="footer-inner">
-					<p>&copy; Copyright <a href="#">Your Site</a> &#124; <a href="#">Terms of Use</a> &#124; <a href="#">Privacy Policy</a></p>
-					<div class="clr"></div>
-				</div>
-			</footer>
 		</div>
 	</body>
 </html>
