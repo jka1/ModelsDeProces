@@ -12,7 +12,7 @@ class User(models.Model):
 
 class Sport(models.Model):
     sportName = models.CharField(max_length=100)
-    users = models.ManyToManyField(User)
+
 
     def __str__(self):
         return self.sportName
