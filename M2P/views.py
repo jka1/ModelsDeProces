@@ -13,7 +13,7 @@ def esports(request):
 
 
 def pista(request):
-    return render(request, 'pista.html')
+    return render(request, 'localitzacio.html')
 
 
 def event(request):
