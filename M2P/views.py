@@ -17,7 +17,8 @@ def index(request):
 
 def esports(request):
     sport_list = Sport.objects.order_by('sportName')[:5]
-    return render(request, 'esports.html')
+    context = {'sport_list': sport_list}
+    return render(request, 'esports.html', context)
 
 
 def localitzacio(request):
