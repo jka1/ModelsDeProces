@@ -9,13 +9,12 @@ def index(request):
 
 
 def esports(request):
-    return HttpResponse("Aixo serà la pàgina dels esports.")
+    return render(request, 'esports.html')
 
 
 def pista(request):
-    response = "Aixo serà la pàgina de una pista"
-    return HttpResponse(response)
+    return render(request, 'pista.html')
 
 
 def event(request):
-    return HttpResponse("Això sera la pagina de un event.")
+    return render(request, 'events.html')
