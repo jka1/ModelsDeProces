@@ -12,7 +12,7 @@ def esports(request):
     return render(request, 'esports.html')
 
 
-def pista(request):
+def localitzacio(request):
     return render(request, 'localitzacio.html')
 
 
