@@ -29,7 +29,7 @@ class Location(models.Model):
 
 
 class DateTime(models.Model):
-    dateTime = models.DateTimeField(primary_key=True)
+    dateTime = models.DateTimeField()
 
     def __str__(self):
         return self.dateTime
