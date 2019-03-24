@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'esports/', views.esports, name='esports'),
     url(r'events/', views.event, name='event'),
     url(r'localitzacio/', views.localitzacio, name='localitzacio'),
-    url(r'localitzacio/', views.localitzacio, name='localitzacio'),
+    url(r'amics/', views.amics, name='amics'),
 
     path('signup/', views.SignUp.as_view(), name='signup'),
 

@@ -27,6 +27,9 @@ def localitzacio(request):
 def event(request):
     return render(request, 'events.html')
 
+def amics(request):
+    return render(request, 'amics.html')
+
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm

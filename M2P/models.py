@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -44,5 +45,11 @@ class Event(models.Model):
         return self.eventName
 
 
+class Friendship(models.Model):
+    creator = models.ForeignKey(User, related_name="friendship_creator_set", on_delete=models.CASCADE)
+    friend = models.ForeignKey(User, related_name="friend_set",on_delete=models.CASCADE)
+
+    def _str_(self):
+        return self.friend
 
 
