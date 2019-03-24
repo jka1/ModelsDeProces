@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!-- Template by html.am -->
-<html>
-	<head>
+<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>M2P</title>
 		<style type="text/css">
@@ -56,7 +54,9 @@
 			}
 		</script>
 	</head>
-	<body>
+
+
+<body>
 		<div id="page">
 			<header id="header">
 				<div id="header-inner">
@@ -68,7 +68,6 @@
 						<li><a href="#">About</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">FAQ</a></li>
-						<li><a href="{% url 'logout' %}">Logout</a></li>
 						</ul>
 					</div>
 					<div class="clr"></div>
@@ -76,27 +75,14 @@
 			</header>
 			<div id="content">
 				<div id="content-inner">
-
-					<main id="contentbar">
-						<div class="article">
-							<p><script>generateText(12)</script></p>
-						</div>
-					</main>
-
-					<nav id="sidebar">
-						<div class="widget">
-							<h3>Menu</h3>
-							<ul>
-							<li><a href="{% url 'M2P:esports' %}">Esports</a></li>
-							<li><a href="{% url 'M2P:event' %}">Events</a></li>
-							<li><a href="#">Amics</a></li>
-							</ul>
-						</div>
-					</nav>
-
-					<div class="clr"></div>
+                    <h2>Login</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Login</button>
+                        <button type="submit"><a href="/M2P/signup">Sign Up</a></button>
+                    </form>
 				</div>
 			</div>
 		</div>
-	</body>
-</html>
+</body>
